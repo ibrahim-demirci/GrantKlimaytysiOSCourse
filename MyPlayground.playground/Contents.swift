@@ -1,11 +1,11 @@
 import UIKit
 
-var letters = Set<Character>()
 
-letters.insert("a")
+// Dictionary<Key,Value>
 
-var favs : Set<String> = ["Pizza", "Ayran", "Cola","Pizza"]
+var namesOfIntegers = [Int: [String]]()
 
+namesOfIntegers[2] = ["two", "dvah"]
 
-
+print(namesOfIntegers[2]?[1])
 
