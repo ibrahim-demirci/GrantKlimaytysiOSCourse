@@ -1,11 +1,23 @@
 import UIKit
 
 
-// Dictionary<Key,Value>
+var myNum = 32
 
-var namesOfIntegers = [Int: [String]]()
+if myNum == 33{
+    print(myNum)
+} else if myNum > 33{
+    print("old man")
+} else {
+    print("Young man!")
+}
 
-namesOfIntegers[2] = ["two", "dvah"]
 
-print(namesOfIntegers[2]?[1])
-
+switch myNum {
+case 33:
+    print(myNum)
+case 0..<33:
+    print("Young men!")
+default:
+    print("old")
+    
+}
