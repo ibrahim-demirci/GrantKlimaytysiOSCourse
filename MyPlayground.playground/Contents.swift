@@ -1,19 +1,10 @@
 import UIKit
 
-var someInts : [Int] = [5,8,88,2352]
-var someStrings = [String]()
+var letters = Set<Character>()
 
+letters.insert("a")
 
-someInts.append(4)
-someStrings.append("G")
-
-someInts += [6,8]
-
-someInts.count
-someStrings.count
-
-someInts[2]
-
+var favs : Set<String> = ["Pizza", "Ayran", "Cola","Pizza"]
 
 
 
