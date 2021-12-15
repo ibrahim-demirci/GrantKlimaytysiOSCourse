@@ -1,14 +1,15 @@
 import UIKit
 
-for  i in 0..<10{
-    print(i)
+var count : Int = 0
+
+while count < 10 {
+    print(count)
+    count = count + 1
     
 }
 
-var numbers : [Int] = [4,76,2,6,1]
-
-for n in numbers{
-    print(n)
-}
-
-
+repeat {
+    print("not yet")
+    count = count + 1
+    
+} while count < 20
