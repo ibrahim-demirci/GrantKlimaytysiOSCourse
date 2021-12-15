@@ -2,19 +2,17 @@ import UIKit
 
 
 
-func CheckCount(message: String, pCount: Int) -> String{
+var myStr: String?
+print(myStr)
+
+
+myStr = "Grant"
+if let myStrValue = myStr{
     
-    var count : Int = pCount
-    while count < 10 {
-        print(message)
-        count = count + 1
-    }
-    
-    return "Done!"
+    var newStr = myStrValue + "suffix"
 
 }
 
-CheckCount(message: "not yet ",pCount: 0)
 
 
 
