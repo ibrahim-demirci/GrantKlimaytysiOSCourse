@@ -1,15 +1,22 @@
 import UIKit
 
-var count : Int = 0
 
-while count < 10 {
-    print(count)
-    count = count + 1
+
+func CheckCount(message: String, pCount: Int) -> String{
     
+    var count : Int = pCount
+    while count < 10 {
+        print(message)
+        count = count + 1
+    }
+    
+    return "Done!"
+
 }
 
-repeat {
-    print("not yet")
-    count = count + 1
-    
-} while count < 20
+CheckCount(message: "not yet ",pCount: 0)
+
+
+
+
+
