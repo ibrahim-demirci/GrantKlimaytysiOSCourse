@@ -22,7 +22,7 @@
                                     <constraint firstAttribute="width" constant="160" id="yFv-il-pAZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noU-2y-Fya">
                                 <rect key="frame" x="145" y="405" width="124" height="36"/>
@@ -30,6 +30,9 @@
                                 <state key="normal" title="Convert  to F">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="convertClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n3I-qg-LOx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP8-sv-rJL">
                                 <rect key="frame" x="157.5" y="461" width="99" height="32"/>
@@ -49,6 +52,10 @@
                             <constraint firstItem="qvF-EZ-oul" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="peq-bF-qGY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="oP8-sv-rJL" id="S0O-5r-soq"/>
+                        <outlet property="tempEntry" destination="qvF-EZ-oul" id="vmf-yP-lMZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
