@@ -17,7 +17,20 @@ class ViewController: UIViewController {
     }
 
     @IBAction func convertClicked(_ sender: Any) {
-        print("convert clicked")
+
+        if let result = tempEntry.text{
+            if result == ""{
+                return
+            }
+            else {
+                if let num = Double(result){
+                    let output = num * (9/5) + 32
+                    resultLabel.text = String(output)
+                }
+                
+                
+            }
+        }
     }
     
 }
