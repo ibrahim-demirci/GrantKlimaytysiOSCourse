@@ -8,14 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var myButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.view.backgroundColor = UIColor.red
+        
     }
 
-
+    @IBAction func MyButtonClicked(_ sender: Any) {
+        self.view.backgroundColor = UIColor.red
+    }
+    
 }
 
