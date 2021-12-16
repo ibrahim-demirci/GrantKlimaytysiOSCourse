@@ -2,28 +2,24 @@ import UIKit
 
 
 
-class FastCar{
-    var topSpeed : Int
+class Car {
+    let numWheels: Int
     
-    init(topSpeed: Int) {
-        
-        self.topSpeed = topSpeed
+    init(numWheels: Int) {
+        self.numWheels = numWheels
     }
-    
-    func GetTopSpeed() -> Int{
-        return self.topSpeed
-    }
-    
-    
 }
 
+class FamilyCar: Car{
+    let numDoors = 5
+}
 
-var myCar = FastCar(topSpeed: 210)
-myCar.GetTopSpeed()
+class BigFamilyCar: FamilyCar{
+    var size = "Large"
+}
 
-
-var ferrari = FastCar(topSpeed: 220)
-ferrari.GetTopSpeed()
-
-
+var bigCar = BigFamilyCar(numWheels: 6)
+bigCar.size
+bigCar.numDoors
+bigCar.numWheels
 
