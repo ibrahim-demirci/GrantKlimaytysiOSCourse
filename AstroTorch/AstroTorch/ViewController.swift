@@ -8,6 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    var isRed = false
+    
     @IBOutlet weak var myButton: UIButton!
     
     override func viewDidLoad() {
@@ -18,7 +22,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func MyButtonClicked(_ sender: Any) {
-        self.view.backgroundColor = UIColor.red
+        
+        if isRed{
+            self.view.backgroundColor = UIColor.blue
+            isRed = !isRed
+            
+        } else {
+            self.view.backgroundColor = .red
+            isRed = !isRed
+        }
+        
     }
     
 }
