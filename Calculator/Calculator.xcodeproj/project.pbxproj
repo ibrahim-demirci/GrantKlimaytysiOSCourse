@@ -13,6 +13,7 @@
 		0A74F839276BCE2500473737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A74F837276BCE2500473737 /* Main.storyboard */; };
 		0A74F83B276BCE2600473737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A74F83A276BCE2600473737 /* Assets.xcassets */; };
 		0A74F83E276BCE2600473737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A74F83C276BCE2600473737 /* LaunchScreen.storyboard */; };
+		0A74F846276BEFED00473737 /* StructsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A74F845276BEFED00473737 /* StructsEnums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0A74F83A276BCE2600473737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A74F83D276BCE2600473737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A74F83F276BCE2600473737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A74F845276BEFED00473737 /* StructsEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructsEnums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0A74F83A276BCE2600473737 /* Assets.xcassets */,
 				0A74F83C276BCE2600473737 /* LaunchScreen.storyboard */,
 				0A74F83F276BCE2600473737 /* Info.plist */,
+				0A74F845276BEFED00473737 /* StructsEnums.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A74F836276BCE2500473737 /* ViewController.swift in Sources */,
+				0A74F846276BEFED00473737 /* StructsEnums.swift in Sources */,
 				0A74F832276BCE2500473737 /* AppDelegate.swift in Sources */,
 				0A74F834276BCE2500473737 /* SceneDelegate.swift in Sources */,
 			);
