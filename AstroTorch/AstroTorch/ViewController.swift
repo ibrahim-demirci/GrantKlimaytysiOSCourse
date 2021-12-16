@@ -25,12 +25,13 @@ class ViewController: UIViewController {
         
         if isRed{
             self.view.backgroundColor = UIColor.blue
-            isRed = !isRed
+           
             
         } else {
             self.view.backgroundColor = .red
-            isRed = !isRed
+           
         }
+        isRed = !isRed
         
     }
     
