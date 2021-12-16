@@ -8,9 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var conversionsCount = 0
+    
     @IBOutlet weak var tempEntry: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
-    
+    @IBOutlet weak var conversionsLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,11 +29,18 @@ class ViewController: UIViewController {
                 if let num = Double(result){
                     let output = num * (9/5) + 32
                     resultLabel.text = String(output)
+                    updateCountByOne()
+                    
                 }
                 
                 
             }
         }
+    }
+    
+    func updateCountByOne() {
+        conversionsCount += 1
+        conversionsLabel.text = String(conversionsCount) + " conversions"
     }
     
 }

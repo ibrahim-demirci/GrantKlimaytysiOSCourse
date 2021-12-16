@@ -40,19 +40,29 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 conversions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBf-4i-Myv">
+                                <rect key="frame" x="16" y="52" width="382" height="23.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="qvF-EZ-oul" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="30w-aI-0uP"/>
                             <constraint firstItem="oP8-sv-rJL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8oc-kY-AVr"/>
+                            <constraint firstItem="ZBf-4i-Myv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Ffj-Dj-nco"/>
+                            <constraint firstItem="ZBf-4i-Myv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UBa-o2-jME"/>
                             <constraint firstItem="noU-2y-Fya" firstAttribute="top" secondItem="qvF-EZ-oul" secondAttribute="bottom" constant="20" id="XjX-68-yjS"/>
                             <constraint firstItem="noU-2y-Fya" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZvA-ye-HyI"/>
                             <constraint firstItem="oP8-sv-rJL" firstAttribute="top" secondItem="noU-2y-Fya" secondAttribute="bottom" constant="20" id="iIy-sK-dWb"/>
                             <constraint firstItem="qvF-EZ-oul" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="peq-bF-qGY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZBf-4i-Myv" secondAttribute="trailing" constant="16" id="sUS-di-vhn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="conversionsLabel" destination="ZBf-4i-Myv" id="V2B-fl-quC"/>
                         <outlet property="resultLabel" destination="oP8-sv-rJL" id="S0O-5r-soq"/>
                         <outlet property="tempEntry" destination="qvF-EZ-oul" id="vmf-yP-lMZ"/>
                     </connections>
@@ -63,6 +73,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
