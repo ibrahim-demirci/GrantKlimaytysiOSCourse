@@ -27,7 +27,7 @@
         <!--Time Now-->
         <scene sceneID="uQN-6z-UhO">
             <objects>
-                <viewController id="HOR-dl-Ezz" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController id="HOR-dl-Ezz" customClass="FirstViewController" customModule="BackToTheFuture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g5m-9w-3eA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,7 +103,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Time Now" id="aOT-4M-2Gn"/>
                     <connections>
-                        <outlet property="label1" destination="g5m-9w-3eA" id="iIv-BY-9rX"/>
+                        <outlet property="label1" destination="KVL-TX-Anf" id="VVc-0c-VhK"/>
                         <outlet property="label2" destination="UL1-Gb-CPF" id="MCp-SA-xjl"/>
                         <outlet property="label3" destination="RhQ-fl-828" id="MKP-s8-9TX"/>
                         <outlet property="label4" destination="kTu-rO-b0j" id="Tss-Jf-KJT"/>

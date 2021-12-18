@@ -9,7 +9,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
-    @IBOutlet var label1: UIView!
+    @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
     @IBOutlet weak var label4: UILabel!
@@ -17,7 +17,18 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let year = Utilities().getCurrentYear()
+        
+        label1.text = Utilities().GetLetterAtIndex(str: year, location: 0)
+        label2.text = Utilities().GetLetterAtIndex(str: year, location: 1)
+        label3.text = Utilities().GetLetterAtIndex(str: year, location: 2)
+        label4.text = Utilities().GetLetterAtIndex(str: year, location: 3)
+
+        
     }
+    
+    
 
 
 }
