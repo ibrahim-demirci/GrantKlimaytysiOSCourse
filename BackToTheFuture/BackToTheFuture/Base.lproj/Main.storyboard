@@ -164,7 +164,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5cS-w1-q51"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="KVL-TX-Anf" firstAttribute="centerY" secondItem="g5m-9w-3eA" secondAttribute="centerY" id="6Y0-rP-iOj"/>
                             <constraint firstItem="RhQ-fl-828" firstAttribute="leading" secondItem="UL1-Gb-CPF" secondAttribute="trailing" constant="8" id="KdT-cu-XAl"/>
