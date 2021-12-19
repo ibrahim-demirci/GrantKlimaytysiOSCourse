@@ -38,11 +38,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let coordinate = locationManager.location?.coordinate
         
         if let latitude = coordinate?.latitude {
-            print("Latitude \(latitude)")
+            if let longitude = coordinate?.longitude {
+                DataStore().StoreDataPoint(latitude: String(latitude), longitude: String(longitude))
+            }
         }
-        if let longitude = coordinate?.longitude {
-            print("Latitude \(longitude)")
-        }
+        
         
     }
     
