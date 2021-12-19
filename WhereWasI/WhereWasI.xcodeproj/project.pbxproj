@@ -14,6 +14,7 @@
 		0A74F8E9276F78E100473737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A74F8E8276F78E100473737 /* Assets.xcassets */; };
 		0A74F8EC276F78E100473737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A74F8EA276F78E100473737 /* LaunchScreen.storyboard */; };
 		0A74F8F5276F7B1F00473737 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A74F8F4276F7B1E00473737 /* MapKit.framework */; };
+		0AE8B700276FF82D00E1357F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE8B6FF276FF82D00E1357F /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0A74F8EB276F78E100473737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A74F8ED276F78E100473737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A74F8F4276F7B1E00473737 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0AE8B6FF276FF82D00E1357F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0A74F8DF276F78DF00473737 /* AppDelegate.swift */,
 				0A74F8E1276F78DF00473737 /* SceneDelegate.swift */,
 				0A74F8E3276F78DF00473737 /* ViewController.swift */,
+				0AE8B6FF276FF82D00E1357F /* DataModel.swift */,
 				0A74F8E5276F78DF00473737 /* Main.storyboard */,
 				0A74F8E8276F78E100473737 /* Assets.xcassets */,
 				0A74F8EA276F78E100473737 /* LaunchScreen.storyboard */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A74F8E4276F78DF00473737 /* ViewController.swift in Sources */,
+				0AE8B700276FF82D00E1357F /* DataModel.swift in Sources */,
 				0A74F8E0276F78DF00473737 /* AppDelegate.swift in Sources */,
 				0A74F8E2276F78DF00473737 /* SceneDelegate.swift in Sources */,
 			);
