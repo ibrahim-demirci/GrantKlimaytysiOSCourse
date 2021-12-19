@@ -17,16 +17,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HPd-O6-fIg">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85o-B1-b8b">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Where Was I?" id="tH0-U5-g0c">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Kd6-7s-JXb">
+                                            <connections>
+                                                <action selector="SaveButtonClicked:" destination="BYZ-38-t0r" id="IGd-EE-qKW"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HPd-O6-fIg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TqZ-vP-ztX"/>
+                            <constraint firstItem="85o-B1-b8b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ApE-aT-U2K"/>
+                            <constraint firstItem="85o-B1-b8b" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ku8-HT-Yyj"/>
                             <constraint firstItem="HPd-O6-fIg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="axX-1g-ciN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HPd-O6-fIg" secondAttribute="bottom" id="cZP-ON-64k"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HPd-O6-fIg" secondAttribute="trailing" id="kSm-zM-7S8"/>
+                            <constraint firstItem="HPd-O6-fIg" firstAttribute="top" secondItem="85o-B1-b8b" secondAttribute="bottom" id="uHx-u3-qn7"/>
+                            <constraint firstItem="85o-B1-b8b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vgm-5G-qw8"/>
                         </constraints>
                     </view>
                     <connections>
@@ -35,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="89"/>
+            <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>
