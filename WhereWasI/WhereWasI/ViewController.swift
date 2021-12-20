@@ -21,6 +21,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+        if let oldCoords = DataStore().GetLastLocation() {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate.latitude = Double(oldCoords.latitude)!
+            annotation.coordinate.longitude = Double(oldCoords.longitude)!
+            
+            annotation.title = "I was here!"
+            annotation.subtitle = "Remember?"
+            
+            mapView.addAnnotation(annotation)
+        }
     }
     
     
