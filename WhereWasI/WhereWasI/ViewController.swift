@@ -22,7 +22,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
+        UpdateSavedPin()
+        
+    }
+    
+    func UpdateSavedPin() {
         if let oldCoords = DataStore().GetLastLocation() {
+            
+            
+            let annoRem = mapView.annotations.filter{$0 !== mapView.userLocation}
+            mapView.removeAnnotations(annoRem)
+            
             let annotation = MKPointAnnotation()
             annotation.coordinate.latitude = Double(oldCoords.latitude)!
             annotation.coordinate.longitude = Double(oldCoords.longitude)!
@@ -51,6 +61,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if let latitude = coordinate?.latitude {
             if let longitude = coordinate?.longitude {
                 DataStore().StoreDataPoint(latitude: String(latitude), longitude: String(longitude))
+                
+                UpdateSavedPin()
             }
         }
         
