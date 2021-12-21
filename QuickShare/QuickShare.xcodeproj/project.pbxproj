@@ -15,6 +15,8 @@
 		0AE8B71C2771D79000E1357F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE8B71A2771D79000E1357F /* LaunchScreen.storyboard */; };
 		0AE8B7242771DA7C00E1357F /* images in Resources */ = {isa = PBXBuildFile; fileRef = 0AE8B7232771DA7C00E1357F /* images */; };
 		0AE8B7262772051D00E1357F /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE8B7252772051D00E1357F /* MyTableViewCell.swift */; };
+		0AE8B7282772133E00E1357F /* ShowImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE8B7272772133E00E1357F /* ShowImageViewController.swift */; };
+		0AE8B72B27728D3A00E1357F /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE8B72A27728D3A00E1357F /* Photos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		0AE8B71D2771D79000E1357F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AE8B7232771DA7C00E1357F /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		0AE8B7252772051D00E1357F /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		0AE8B7272772133E00E1357F /* ShowImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageViewController.swift; sourceTree = "<group>"; };
+		0AE8B72A27728D3A00E1357F /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE8B72B27728D3A00E1357F /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,7 @@
 			children = (
 				0AE8B70E2771D78F00E1357F /* QuickShare */,
 				0AE8B70D2771D78F00E1357F /* Products */,
+				0AE8B72927728D3A00E1357F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,8 +75,17 @@
 				0AE8B71A2771D79000E1357F /* LaunchScreen.storyboard */,
 				0AE8B71D2771D79000E1357F /* Info.plist */,
 				0AE8B7252772051D00E1357F /* MyTableViewCell.swift */,
+				0AE8B7272772133E00E1357F /* ShowImageViewController.swift */,
 			);
 			path = QuickShare;
+			sourceTree = "<group>";
+		};
+		0AE8B72927728D3A00E1357F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AE8B72A27728D3A00E1357F /* Photos.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +163,7 @@
 				0AE8B7262772051D00E1357F /* MyTableViewCell.swift in Sources */,
 				0AE8B7102771D78F00E1357F /* AppDelegate.swift in Sources */,
 				0AE8B7122771D78F00E1357F /* SceneDelegate.swift in Sources */,
+				0AE8B7282772133E00E1357F /* ShowImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SHMD75K85D;
 				INFOPLIST_FILE = QuickShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SHMD75K85D;
 				INFOPLIST_FILE = QuickShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
