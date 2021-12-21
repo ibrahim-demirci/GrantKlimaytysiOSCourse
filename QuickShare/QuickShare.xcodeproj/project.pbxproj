@@ -49,9 +49,9 @@
 		0AE8B7032771D78F00E1357F = {
 			isa = PBXGroup;
 			children = (
-				0AE8B70E2771D78F00E1357F /* QuickShare */,
-				0AE8B70D2771D78F00E1357F /* Products */,
 				0AE8B72927728D3A00E1357F /* Frameworks */,
+				0AE8B70D2771D78F00E1357F /* Products */,
+				0AE8B70E2771D78F00E1357F /* QuickShare */,
 			);
 			sourceTree = "<group>";
 		};

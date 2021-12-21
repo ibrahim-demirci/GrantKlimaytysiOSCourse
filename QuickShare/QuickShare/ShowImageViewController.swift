@@ -6,16 +6,25 @@
 //
 
 import UIKit
-
+import Photos
 class ShowImageViewController: UIViewController {
     
-    var passedString = ""
-
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var asset: PHAsset?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(passedString)
+        if let myAsset = asset {
+            PHImageManager.default().requestImage(for: myAsset, targetSize: CGSize(width: self.view.frame.width, height: self.view.frame.width * 0.5625), contentMode: .aspectFill, options: nil) { result, info in
+                if let image = result {
+                    self.imageView.image = image
+                }
+            }
+        }
     }
     
 
