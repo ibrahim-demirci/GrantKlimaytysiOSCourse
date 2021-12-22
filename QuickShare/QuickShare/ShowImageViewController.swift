@@ -27,6 +27,23 @@ class ShowImageViewController: UIViewController {
         }
     }
     
+    @IBAction func shareButtonClicked (_ sender: UIButton) {
+        switch sender.tag {
+        case 1:
+            print("facebook")
+        case 2:
+            print("insta")
+        case 3:
+            print("twitter")
+        case 4:
+            print("whatsapp")
+        case 5:
+            print("pin")
+        default:
+            print("nout")
+        }
+    }
+    
 
 
 }

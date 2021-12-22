@@ -100,13 +100,72 @@
                                     <constraint firstAttribute="width" secondItem="Apt-5x-VeI" secondAttribute="height" multiplier="16:9" id="dE4-dp-adQ"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbh-Vr-DRT">
+                                <rect key="frame" x="95" y="351" width="62" height="62"/>
+                                <state key="normal" image="images/insta.png"/>
+                                <connections>
+                                    <action selector="shareButtonClicked:" destination="auu-rq-T3g" eventType="touchUpInside" id="zrD-bw-JDb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-vW-ENV">
+                                <rect key="frame" x="176" y="351" width="62" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ot3-vW-ENV" secondAttribute="height" id="S92-aS-EJ3"/>
+                                </constraints>
+                                <state key="normal" image="images/twitter.png"/>
+                                <connections>
+                                    <action selector="shareButtonClicked:" destination="auu-rq-T3g" eventType="touchUpInside" id="jV6-9P-i7R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovM-Yf-ySn">
+                                <rect key="frame" x="257" y="351" width="62.5" height="62.5"/>
+                                <state key="normal" image="images/whats.png"/>
+                                <connections>
+                                    <action selector="shareButtonClicked:" destination="auu-rq-T3g" eventType="touchUpInside" id="rDb-cs-ndt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veO-ER-WkO">
+                                <rect key="frame" x="338.5" y="350" width="63" height="62.5"/>
+                                <state key="normal" image="images/pin.png"/>
+                                <connections>
+                                    <action selector="shareButtonClicked:" destination="auu-rq-T3g" eventType="touchUpInside" id="fql-g6-Muk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEv-C6-IVN">
+                                <rect key="frame" x="14" y="350" width="62" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kEv-C6-IVN" secondAttribute="height" multiplier="1:1" id="8tY-Mj-AoY"/>
+                                </constraints>
+                                <state key="normal" image="images/fb.png"/>
+                                <connections>
+                                    <action selector="shareButtonClicked:" destination="auu-rq-T3g" eventType="touchUpInside" id="mkB-fV-cvf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BCc-R0-rqn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zbh-Vr-DRT" firstAttribute="top" secondItem="kEv-C6-IVN" secondAttribute="top" constant="1" id="4ya-Xy-fuq"/>
+                            <constraint firstItem="veO-ER-WkO" firstAttribute="leading" secondItem="ovM-Yf-ySn" secondAttribute="trailing" constant="19" id="68z-lX-ZKn"/>
+                            <constraint firstItem="ot3-vW-ENV" firstAttribute="leading" secondItem="zbh-Vr-DRT" secondAttribute="trailing" constant="19" id="93B-x2-223"/>
+                            <constraint firstItem="veO-ER-WkO" firstAttribute="width" secondItem="veO-ER-WkO" secondAttribute="height" id="9f4-yQ-vIf"/>
+                            <constraint firstItem="ovM-Yf-ySn" firstAttribute="width" secondItem="ovM-Yf-ySn" secondAttribute="height" id="9tl-Tm-fAl"/>
+                            <constraint firstItem="veO-ER-WkO" firstAttribute="width" secondItem="kEv-C6-IVN" secondAttribute="width" multiplier="1.00806" id="AIz-vA-ycB"/>
                             <constraint firstItem="Apt-5x-VeI" firstAttribute="top" secondItem="BCc-R0-rqn" secondAttribute="top" id="C9o-7o-c1u"/>
+                            <constraint firstItem="ot3-vW-ENV" firstAttribute="width" secondItem="kEv-C6-IVN" secondAttribute="width" id="E8Y-s4-QeS"/>
+                            <constraint firstItem="kEv-C6-IVN" firstAttribute="top" secondItem="Apt-5x-VeI" secondAttribute="bottom" constant="29" id="Jx8-O8-Nlk"/>
+                            <constraint firstItem="zbh-Vr-DRT" firstAttribute="width" secondItem="zbh-Vr-DRT" secondAttribute="height" multiplier="1:1" id="Mxf-jK-NGu"/>
                             <constraint firstItem="BCc-R0-rqn" firstAttribute="trailing" secondItem="Apt-5x-VeI" secondAttribute="trailing" id="NEL-PR-a1g"/>
+                            <constraint firstItem="ovM-Yf-ySn" firstAttribute="top" secondItem="kEv-C6-IVN" secondAttribute="top" constant="1" id="Q2Y-L5-Bvq"/>
+                            <constraint firstItem="ovM-Yf-ySn" firstAttribute="leading" secondItem="ot3-vW-ENV" secondAttribute="trailing" constant="19" id="SCy-TQ-80O"/>
+                            <constraint firstItem="ovM-Yf-ySn" firstAttribute="width" secondItem="kEv-C6-IVN" secondAttribute="width" multiplier="1.00806" id="UVF-Cb-3KG"/>
+                            <constraint firstItem="veO-ER-WkO" firstAttribute="top" secondItem="kEv-C6-IVN" secondAttribute="top" id="dQi-lP-y0I"/>
+                            <constraint firstItem="ot3-vW-ENV" firstAttribute="centerX" secondItem="d19-g4-kdX" secondAttribute="centerX" id="f0C-Xw-W8o"/>
+                            <constraint firstItem="ot3-vW-ENV" firstAttribute="top" secondItem="kEv-C6-IVN" secondAttribute="top" constant="1" id="fRA-Hf-Lau"/>
+                            <constraint firstItem="zbh-Vr-DRT" firstAttribute="leading" secondItem="kEv-C6-IVN" secondAttribute="trailing" constant="19" id="kvJ-lC-AVC"/>
                             <constraint firstItem="Apt-5x-VeI" firstAttribute="leading" secondItem="BCc-R0-rqn" secondAttribute="leading" id="pev-Dx-FX3"/>
+                            <constraint firstItem="kEv-C6-IVN" firstAttribute="width" secondItem="d19-g4-kdX" secondAttribute="width" multiplier="0.15" id="vTx-s0-SdS"/>
+                            <constraint firstItem="zbh-Vr-DRT" firstAttribute="width" secondItem="kEv-C6-IVN" secondAttribute="width" id="w8T-BS-zLL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x2a-tv-eIy"/>
@@ -116,10 +175,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pZ-wB-k2y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="145" y="94"/>
+            <point key="canvasLocation" x="144.92753623188406" y="93.75"/>
         </scene>
     </scenes>
     <resources>
+        <image name="images/fb.png" width="128" height="128"/>
+        <image name="images/insta.png" width="128" height="128"/>
+        <image name="images/pin.png" width="128" height="128"/>
+        <image name="images/twitter.png" width="128" height="128"/>
+        <image name="images/whats.png" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
