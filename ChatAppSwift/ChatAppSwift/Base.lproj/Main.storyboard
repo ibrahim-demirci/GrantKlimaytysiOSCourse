@@ -27,8 +27,8 @@
         <!--Login Register View Controller-->
         <scene sceneID="Y7t-xe-xvt">
             <objects>
-                <viewController id="O2y-LI-dCZ" customClass="LoginRegisterViewController" customModule="ChatAppSwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="firebaseLoginViewController" id="Sng-vR-AWL">
+                <viewController storyboardIdentifier="firebaseLoginViewController" id="O2y-LI-dCZ" customClass="LoginRegisterViewController" customModule="ChatAppSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sng-vR-AWL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
