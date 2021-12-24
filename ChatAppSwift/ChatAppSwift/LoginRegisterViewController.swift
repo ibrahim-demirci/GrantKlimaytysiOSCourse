@@ -77,7 +77,6 @@ class LoginRegisterViewController: UIViewController {
                 Utilities().showAlert(title: "Error", message: "Passwords not the same!", vc: self)
             }
         }))
-        
         self.present(alert, animated: true, completion: nil)
         
     }

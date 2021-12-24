@@ -15,10 +15,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="esF-31-Xsm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="704"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" id="WNW-8H-371">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WNW-8H-371" id="EiR-fe-nzh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9eJ-Cd-k70">
+                                <rect key="frame" x="0.0" y="792" width="414" height="50"/>
+                                <color key="backgroundColor" red="0.58823529409999997" green="0.85882352939999995" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="g1A-0S-wLb"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9eJ-Cd-k70" secondAttribute="trailing" id="2Og-u9-L8P"/>
+                            <constraint firstItem="9eJ-Cd-k70" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6ec-fE-i64"/>
+                            <constraint firstItem="esF-31-Xsm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8bq-GT-Z5G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="esF-31-Xsm" secondAttribute="trailing" id="Xmw-2V-ntE"/>
+                            <constraint firstItem="esF-31-Xsm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fsy-IA-gW9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9eJ-Cd-k70" secondAttribute="bottom" constant="20" id="j5z-1e-G9w"/>
+                            <constraint firstItem="9eJ-Cd-k70" firstAttribute="top" secondItem="esF-31-Xsm" secondAttribute="bottom" id="oCJ-om-vyr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LTO-cm-PNR"/>
+                    <connections>
+                        <outlet property="tableView" destination="esF-31-Xsm" id="ruZ-BJ-nxh"/>
+                        <outlet property="textField" destination="9eJ-Cd-k70" id="E8E-ox-VJf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
