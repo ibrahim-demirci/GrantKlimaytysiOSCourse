@@ -7,6 +7,8 @@
 
 import UIKit
 import Photos
+import Social
+
 class ShowImageViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
@@ -30,11 +32,16 @@ class ShowImageViewController: UIViewController {
     @IBAction func shareButtonClicked (_ sender: UIButton) {
         switch sender.tag {
         case 1:
-            print("facebook")
+            if let vc = SLComposeViewController(forServiceType: SLServiceTypeFacebook) {
+                ShareFacebookTwitter(vc: vc)
+            }
+            
         case 2:
             print("insta")
         case 3:
-            print("twitter")
+            if let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter) {
+                ShareFacebookTwitter(vc: vc)
+            }
         case 4:
             print("whatsapp")
         case 5:
@@ -43,6 +50,18 @@ class ShowImageViewController: UIViewController {
             print("nout")
         }
     }
+    
+    
+    func ShareFacebookTwitter(vc: SLComposeViewController) {
+        vc.setInitialText("Look at this great picture!")
+        vc.add(imageView.image)
+        vc.add(URL( string: "https://www.learnappdevelopment.com"))
+        present(vc, animated: true, completion: nil)
+        
+        
+    }
+    
+    
     
 
 
