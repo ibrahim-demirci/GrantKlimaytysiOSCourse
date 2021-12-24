@@ -101,5 +101,18 @@ class LoginRegisterViewController: UIViewController {
     }
     
     @IBAction func forgotClicked(_ sender: Any) {
+        
+        if let email = emailTextField.text {
+            if !email.isEmpty {
+                Auth.auth().sendPasswordReset(withEmail: email) { error in
+                    if let error = error {
+                        Utilities().showAlert(title: "Error", message: error.localizedDescription, vc: self)
+                    }
+                    else {
+                        Utilities().showAlert(title: "Success", message: "Please check your email box.", vc: self)
+                    }
+                }
+            }
+        }
     }
 }
