@@ -50,6 +50,7 @@ class LoginRegisterViewController: UIViewController {
         
         Auth.auth().signIn(withEmail: email!, password: password!) { authResult, error in
             if let error = error {
+                Utilities().showAlert(title: "Error", message: error.localizedDescription, vc: self)
                 print(error.localizedDescription)
                 return
             }
