@@ -29,22 +29,10 @@ class LoginRegisterViewController: UIViewController {
     }
 
     @IBAction func loginClicked(_ sender: Any) {
-        if emailTextField.text?.count ?? 0 < 5 {
-            emailTextField.backgroundColor = UIColor.init(red: 0.8, green: 0, blue: 0, alpha: 0.5)
+        
+        if !ChechInputs() {
             return
         }
-        else {
-            emailTextField.backgroundColor = .white
-        }
-        if passwordTextField.text?.count ?? 0 < 5 {
-            passwordTextField.backgroundColor = UIColor.init(red: 0.8, green: 0, blue: 0, alpha: 0.5)
-            return
-        }
-        else {
-            passwordTextField.backgroundColor = .white
-        }
-        
-        
         let email = emailTextField.text
         let password = passwordTextField.text
         
@@ -61,6 +49,55 @@ class LoginRegisterViewController: UIViewController {
     }
     
     @IBAction func registerClicked(_ sender: Any) {
+        if !ChechInputs() {
+            return
+        }
+        let alert = UIAlertController(title: "Register", message: "Please confirm password", preferredStyle: UIAlertController.Style.alert)
+        alert.addTextField { textField in
+            textField.placeholder = "Password"
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action) -> Void in
+            let passConfirm = alert.textFields![0] as UITextField
+            if passConfirm.text!.isEqual(self.passwordTextField.text!){
+                let email  =  self.emailTextField.text
+                let pass = self.passwordTextField.text
+                
+                Auth.auth().createUser(withEmail: email!, password: pass!) { user, error in
+                    if let error = error {
+                        Utilities().showAlert(title: "Error", message: error.localizedDescription, vc: self)
+                        return
+                    }
+                    else {
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                }
+            }
+            else {
+                Utilities().showAlert(title: "Error", message: "Passwords not the same!", vc: self)
+            }
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func ChechInputs() -> Bool {
+        if emailTextField.text?.count ?? 0 < 5 {
+            emailTextField.backgroundColor = UIColor.init(red: 0.8, green: 0, blue: 0, alpha: 0.5)
+            return false
+        }
+        else {
+            emailTextField.backgroundColor = .white
+        }
+        if passwordTextField.text?.count ?? 0 < 5 {
+            passwordTextField.backgroundColor = UIColor.init(red: 0.8, green: 0, blue: 0, alpha: 0.5)
+            return false
+        }
+        else {
+            passwordTextField.backgroundColor = .white
+        }
+        return true
     }
     
     @IBAction func forgotClicked(_ sender: Any) {
