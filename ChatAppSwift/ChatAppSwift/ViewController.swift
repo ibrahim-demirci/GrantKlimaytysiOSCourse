@@ -59,6 +59,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if let text = message[Constants.MessageFields.text] as? String {
             cell.textLabel?.text = text
         }
+        if let subText = message[Constants.MessageFields.dateTime] {
+            cell.detailTextLabel?.text = subText
+        }
         
         return cell
         
@@ -90,7 +93,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func SendMessage(data: [String: String]) {
-        let packet = data
+        var packet = data
+        packet[Constants.MessageFields.dateTime] = Utilities().GetDate()
         self.ref.child("messages").childByAutoId().setValue(packet)
     }
     
@@ -110,9 +114,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       self.view.frame.origin.y = 0
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField.text?.count ?? 0 == 0 {
+            return true
+        }
         let data = [Constants.MessageFields.text: textField.text! as String]
         SendMessage(data: data)
         print("ended editing")
+        textField.text = ""
         self.view.endEditing(false)
         return true
     }
